@@ -35,8 +35,8 @@ const userShema = new mongoose.Schema({
 userShema.methods.generateJwtToken=(id)=>{
     return jwt.sign(
         {id},
-        process.env.SECRET_KEY,
-        {expiresIn:process.env.EXPIRE_KEY}
+        urlshortener,
+        {expiresIn:2 }
         )
 }
 
